@@ -8,7 +8,7 @@
 </head>
 <body>
     <main class="notes">
-        <aside class="notes__sidebar">
+        <aside class="notes__sidebar mainside">
             <header class="notes__header">
                 <a href="" class="notes__header-link">notes</a>
                 <button class="notes__header-button">
@@ -71,38 +71,59 @@
                 </ul>
             </section>
             <section class="notes__folders">
-                <h2 class="notes__heading">Папки</h2>
+                <div class="notes__top">
+                  <h2 class="notes__heading">Папки</h2>
+                  <button class="notes__top-button">
+                    <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g opacity="0.4">
+                      <path d="M8 10H12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                      <path d="M10 12V8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                      <path d="M1 14V3C1 1.89543 1.89543 1 3 1H7.59375C8.3704 1 9 1.6296 9 2.40625C9 3.1829 9.6296 3.8125 10.4062 3.8125H17C18.1046 3.8125 19 4.70793 19 5.8125V14C19 15.1046 18.1046 16 17 16H3C1.89543 16 1 15.1046 1 14Z" stroke="currentColor" stroke-width="2"/>
+                      </g>
+                    </svg>
+                  </button>
+                </div>
                 <ul class="notes__list">
                     <li class="notes__item">
                         <button class="notes__link folder">
-                            
+                            <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path opacity="0.6" d="M1 14V3C1 1.89543 1.89543 1 3 1H7.59375C8.3704 1 9 1.6296 9 2.40625C9 3.1829 9.6296 3.8125 10.4062 3.8125H17C18.1046 3.8125 19 4.70793 19 5.8125V14C19 15.1046 18.1046 16 17 16H3C1.89543 16 1 15.1046 1 14Z" stroke="currentColor" stroke-width="1.5"/>
+                            </svg>
                             Личное
                         </button>
                     </li>
                     <li class="notes__item">
                         <button class="notes__link folder">
-                            
+                          <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path opacity="0.6" d="M1 14V3C1 1.89543 1.89543 1 3 1H7.59375C8.3704 1 9 1.6296 9 2.40625C9 3.1829 9.6296 3.8125 10.4062 3.8125H17C18.1046 3.8125 19 4.70793 19 5.8125V14C19 15.1046 18.1046 16 17 16H3C1.89543 16 1 15.1046 1 14Z" stroke="currentColor" stroke-width="1.5"/>
+                          </svg>
                             Работа
 
                         </button>
                     </li>
                     <li class="notes__item">
                         <button class="notes__link folder">
-                            
+                          <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path opacity="0.6" d="M1 14V3C1 1.89543 1.89543 1 3 1H7.59375C8.3704 1 9 1.6296 9 2.40625C9 3.1829 9.6296 3.8125 10.4062 3.8125H17C18.1046 3.8125 19 4.70793 19 5.8125V14C19 15.1046 18.1046 16 17 16H3C1.89543 16 1 15.1046 1 14Z" stroke="currentColor" stroke-width="1.5"/>
+                          </svg>
                             Путешествия
 
                         </button>
                     </li>
                     <li class="notes__item">
                         <button class="notes__link folder">
-                            
+                          <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path opacity="0.6" d="M1 14V3C1 1.89543 1.89543 1 3 1H7.59375C8.3704 1 9 1.6296 9 2.40625C9 3.1829 9.6296 3.8125 10.4062 3.8125H17C18.1046 3.8125 19 4.70793 19 5.8125V14C19 15.1046 18.1046 16 17 16H3C1.89543 16 1 15.1046 1 14Z" stroke="currentColor" stroke-width="1.5"/>
+                          </svg>
                             Мероприятия
 
                         </button>
                     </li>
                     <li class="notes__item">
                         <button class="notes__link folder">
-                            
+                          <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path opacity="0.6" d="M1 14V3C1 1.89543 1.89543 1 3 1H7.59375C8.3704 1 9 1.6296 9 2.40625C9 3.1829 9.6296 3.8125 10.4062 3.8125H17C18.1046 3.8125 19 4.70793 19 5.8125V14C19 15.1046 18.1046 16 17 16H3C1.89543 16 1 15.1046 1 14Z" stroke="currentColor" stroke-width="1.5"/>
+                          </svg>
                             Финансы
 
                         </button>
@@ -114,42 +135,60 @@
                 <ul class="notes__list">
                     <li class="notes__item">
                         <button class="notes__link star">
+                          <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path opacity="0.6" d="M10.7622 1.15882C10.8371 0.928483 11.1629 0.92849 11.2378 1.15881L12.9809 6.52356C13.2152 7.2446 13.8871 7.73278 14.6452 7.73278H20.2861C20.5282 7.73278 20.6289 8.04268 20.433 8.18503L15.8695 11.5006C15.2561 11.9463 14.9995 12.7361 15.2337 13.4572L16.9769 18.8219C17.0517 19.0523 16.7881 19.2438 16.5921 19.1014L12.0286 15.7858C11.4153 15.3402 10.5847 15.3402 9.97138 15.7858L5.40785 19.1014C5.21192 19.2438 4.9483 19.0523 5.02314 18.8219L6.76625 13.4572C7.00053 12.7361 6.74388 11.9463 6.13053 11.5006L1.567 8.18503C1.37107 8.04268 1.47177 7.73278 1.71395 7.73278H7.35477C8.11292 7.73278 8.78484 7.2446 9.01912 6.52356L10.7622 1.15882Z" stroke="currentColor" stroke-width="1.5"/>
+                          </svg>
                             Избранное
-
                         </button>
                     </li>
                     <li class="notes__item">
                         <button class="notes__link settings">
+                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <g opacity="0.6">
+                              <path d="M13.7639 17H10H6.23607C5.47852 17 4.786 16.572 4.44721 15.8944L1.44721 9.89443C1.16569 9.33137 1.16569 8.66863 1.44721 8.10557L4.44721 2.10557C4.786 1.428 5.47852 1 6.23607 1H10H13.7639C14.5215 1 15.214 1.428 15.5528 2.10557L18.5528 8.10557C18.8343 8.66863 18.8343 9.33137 18.5528 9.89443L15.5528 15.8944C15.214 16.572 14.5215 17 13.7639 17Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                              <circle cx="10" cy="9" r="3" stroke="currentColor" stroke-width="1.5"/>
+                              </g>
+                            </svg>
                             Настройки
-
                         </button>
                     </li>
                     <li class="notes__item">
                         <button class="notes__link bin">
+                            <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path opacity="0.6" d="M1 5H5.5M17 5H12.5M12.5 5H15V17C15 18.1046 14.1046 19 13 19H5C3.89543 19 3 18.1046 3 17V5H5.5M12.5 5H5.5M12.5 5V3V3C12.5 1.89543 11.6046 1 10.5 1H7.5C6.39543 1 5.5 1.89543 5.5 3V5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
                             Корзина
-
                         </button>
                     </li>
                     <li class="notes__item">
                         <button class="notes__link archive">
+                            <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path opacity="0.6" d="M2.89474 6V14C2.89474 15.1046 3.79017 16 4.89474 16H15.1053C16.2098 16 17.1053 15.1046 17.1053 14V6M2.89474 6H17.1053M2.89474 6H2C1.44772 6 1 5.55228 1 5V2C1 1.44772 1.44772 1 2 1H18C18.5523 1 19 1.44772 19 2V5C19 5.55228 18.5523 6 18 6H17.1053M7.63158 10H12.3684" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
                             Архив
-
                         </button>
                     </li>
                 </ul>
             </section>
         </aside>
-        <aside class="notes__bar" aria-labelledby="notes-title">
+        <aside class="notes__bar view" aria-labelledby="notes-title">
             <header class="notes__header">
-              <h2 id="notes-title" class="notes__title">Личное</h2>
-              <button class="notes__menu-button" aria-label="Меню">
+              <div class="notes__header-left">
+                <button class="notes__header-button notes__header-button__another">
+                  <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 7L1 7M1 7L7.3 13M1 7L7.3 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+                <h2 id="notes-title" class="notes__title">Личное</h2>
+              </div>
+              <button class="notes__menu-button edit-button" aria-label="Меню">
                 <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g opacity="0.2">
-                    <path d="M10 1V15" stroke="#141414" stroke-width="1.5" stroke-linecap="round"/>
-                    <circle cx="10" cy="11" r="1.5" fill="#F8F8F8" stroke="#141414"/>
-                    <path d="M2 1V15" stroke="#141414" stroke-width="1.5" stroke-linecap="round"/>
-                    <circle cx="2" cy="5" r="1.5" fill="#F8F8F8" stroke="#141414"/>
-                    </g>
+                  <g opacity="0.2">
+                  <path d="M10 1V15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  <circle cx="10" cy="11" r="1.5" fill="#141414" stroke="currentColor"/>
+                  <path d="M2 1V15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  <circle cx="2" cy="5" r="1.5" fill="#141414" stroke="currentColor"/>
+                  </g>
                 </svg>
               </button>
             </header>
@@ -181,9 +220,143 @@
                     <button class="notes__item-menu" aria-label="Меню заметки">
                         <svg width="15" height="3" viewBox="0 0 15 3" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g opacity="0.2">
-                            <circle cx="1.5" cy="1.5" r="1.5" fill="#141414"/>
-                            <circle cx="7.5" cy="1.5" r="1.5" fill="#141414"/>
-                            <circle cx="13.5" cy="1.5" r="1.5" fill="#141414"/>
+                            <circle cx="1.5" cy="1.5" r="1.5" fill="currentColor"/>
+                            <circle cx="7.5" cy="1.5" r="1.5" fill="currentColor"/>
+                            <circle cx="13.5" cy="1.5" r="1.5" fill="currentColor"/>
+                            </g>
+                        </svg>
+                    </button>
+                </div>
+                <div class="notes__box">
+                  <button class="notes__box-button">
+                    <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2.89474 6V14C2.89474 15.1046 3.79017 16 4.89474 16H15.1053C16.2098 16 17.1053 15.1046 17.1053 14V6M2.89474 6H17.1053M2.89474 6H2C1.44772 6 1 5.55228 1 5V2C1 1.44772 1.44772 1 2 1H18C18.5523 1 19 1.44772 19 2V5C19 5.55228 18.5523 6 18 6H17.1053M7.63158 10H12.3684" stroke="#141414" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                    Поделиться      
+                  </button>
+                  <button class="notes__box-button">
+                      <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.89474 6V14C2.89474 15.1046 3.79017 16 4.89474 16H15.1053C16.2098 16 17.1053 15.1046 17.1053 14V6M2.89474 6H17.1053M2.89474 6H2C1.44772 6 1 5.55228 1 5V2C1 1.44772 1.44772 1 2 1H18C18.5523 1 19 1.44772 19 2V5C19 5.55228 18.5523 6 18 6H17.1053M7.63158 10H12.3684" stroke="#141414" stroke-width="1.5" stroke-linecap="round"/>
+                      </svg>
+                    Архивировать   
+                  </button>
+                  <button class="notes__box-button notes__box-button__delete">
+                    <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 5H5.5M17 5H12.5M12.5 5H15V17C15 18.1046 14.1046 19 13 19H5C3.89543 19 3 18.1046 3 17V5H5.5M12.5 5H5.5M12.5 5V3V3C12.5 1.89543 11.6046 1 10.5 1H7.5C6.39543 1 5.5 1.89543 5.5 3V5" stroke="#F02C2F" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                    Удалить                      
+                  </button>
+                </div>
+              </article>
+              
+              <article class="notes__item">
+                <header class="notes__item-header">
+                  <h3 class="notes__item-title">Бизнес идеи, которые точно сработают</h3>
+                  <time class="notes__item-date" datetime="2024-07-21">21.07.24</time>
+                </header>
+                <div class="notes__body">
+                    <p class="notes__item-content">Создаём новую точку по продаже...</p>
+                    <button class="notes__item-menu" aria-label="Меню заметки">
+                        <svg width="15" height="3" viewBox="0 0 15 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g opacity="0.2">
+                            <circle cx="1.5" cy="1.5" r="1.5" fill="currentColor"/>
+                            <circle cx="7.5" cy="1.5" r="1.5" fill="currentColor"/>
+                            <circle cx="13.5" cy="1.5" r="1.5" fill="currentColor"/>
+                            </g>
+                        </svg>
+                    </button>
+                </div>
+                <div class="notes__box">
+                  <button class="notes__box-button">
+                    <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2.89474 6V14C2.89474 15.1046 3.79017 16 4.89474 16H15.1053C16.2098 16 17.1053 15.1046 17.1053 14V6M2.89474 6H17.1053M2.89474 6H2C1.44772 6 1 5.55228 1 5V2C1 1.44772 1.44772 1 2 1H18C18.5523 1 19 1.44772 19 2V5C19 5.55228 18.5523 6 18 6H17.1053M7.63158 10H12.3684" stroke="#141414" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                    Поделиться      
+                  </button>
+                  <button class="notes__box-button">
+                      <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.89474 6V14C2.89474 15.1046 3.79017 16 4.89474 16H15.1053C16.2098 16 17.1053 15.1046 17.1053 14V6M2.89474 6H17.1053M2.89474 6H2C1.44772 6 1 5.55228 1 5V2C1 1.44772 1.44772 1 2 1H18C18.5523 1 19 1.44772 19 2V5C19 5.55228 18.5523 6 18 6H17.1053M7.63158 10H12.3684" stroke="#141414" stroke-width="1.5" stroke-linecap="round"/>
+                      </svg>
+                    Архивировать   
+                  </button>
+                  <button class="notes__box-button notes__box-button__delete">
+                    <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 5H5.5M17 5H12.5M12.5 5H15V17C15 18.1046 14.1046 19 13 19H5C3.89543 19 3 18.1046 3 17V5H5.5M12.5 5H5.5M12.5 5V3V3C12.5 1.89543 11.6046 1 10.5 1H7.5C6.39543 1 5.5 1.89543 5.5 3V5" stroke="#F02C2F" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                    Удалить                      
+                  </button>
+                </div>
+              </article>
+              
+              <article class="notes__item">
+                <header class="notes__item-header">
+                  <h3 class="notes__item-title">Я очень давно хотел описать одну идею...</h3>
+                  <time class="notes__item-date" datetime="2024-11-03">03.11.24</time>
+                </header>
+                <div class="notes__body">
+                    <p class="notes__item-content">Создаём самую лучшую шаурмечную</p>
+                    <button class="notes__item-menu" aria-label="Меню заметки">
+                        <svg width="15" height="3" viewBox="0 0 15 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g opacity="0.2">
+                            <circle cx="1.5" cy="1.5" r="1.5" fill="currentColor"/>
+                            <circle cx="7.5" cy="1.5" r="1.5" fill="currentColor"/>
+                            <circle cx="13.5" cy="1.5" r="1.5" fill="currentColor"/>
+                            </g>
+                        </svg>
+                    </button>
+                </div>
+                <div class="notes__box">
+                  <button class="notes__box-button">
+                    <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2.89474 6V14C2.89474 15.1046 3.79017 16 4.89474 16H15.1053C16.2098 16 17.1053 15.1046 17.1053 14V6M2.89474 6H17.1053M2.89474 6H2C1.44772 6 1 5.55228 1 5V2C1 1.44772 1.44772 1 2 1H18C18.5523 1 19 1.44772 19 2V5C19 5.55228 18.5523 6 18 6H17.1053M7.63158 10H12.3684" stroke="#141414" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                    Поделиться      
+                  </button>
+                  <button class="notes__box-button">
+                      <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.89474 6V14C2.89474 15.1046 3.79017 16 4.89474 16H15.1053C16.2098 16 17.1053 15.1046 17.1053 14V6M2.89474 6H17.1053M2.89474 6H2C1.44772 6 1 5.55228 1 5V2C1 1.44772 1.44772 1 2 1H18C18.5523 1 19 1.44772 19 2V5C19 5.55228 18.5523 6 18 6H17.1053M7.63158 10H12.3684" stroke="#141414" stroke-width="1.5" stroke-linecap="round"/>
+                      </svg>
+                    Архивировать   
+                  </button>
+                  <button class="notes__box-button notes__box-button__delete">
+                    <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 5H5.5M17 5H12.5M12.5 5H15V17C15 18.1046 14.1046 19 13 19H5C3.89543 19 3 18.1046 3 17V5H5.5M12.5 5H5.5M12.5 5V3V3C12.5 1.89543 11.6046 1 10.5 1H7.5C6.39543 1 5.5 1.89543 5.5 3V5" stroke="#F02C2F" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                    Удалить                      
+                  </button>
+                </div>
+              </article>
+              
+            </section>
+          </aside>
+          <aside class="notes__bar edit" aria-labelledby="notes-title">
+            <header class="notes__header">
+                <input 
+                  type="text"
+                  class="notes__header-input"
+                  placeholder="Введите название..."
+                >
+              <button class="notes__menu-button confirm-button" aria-label="Меню">
+                <svg width="16" height="11" viewBox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path opacity="0.4" d="M1 5L6 10L15 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </header>
+            
+            <section class="notes__list">
+              <article class="notes__item">
+                <header class="notes__item-header">
+                  <h3 class="notes__item-title">Планы на этот год</h3>
+                  <time class="notes__item-date" datetime="2024-07-15">15.07.24</time>
+                </header>
+                <div class="notes__body">
+                    <p class="notes__item-content">1. Стать крутым веб-дизайнером</p>
+                    <button class="notes__item-menu" aria-label="Меню заметки">
+                        <svg width="15" height="3" viewBox="0 0 15 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g opacity="0.2">
+                            <circle cx="1.5" cy="1.5" r="1.5" fill="currentColor"/>
+                            <circle cx="7.5" cy="1.5" r="1.5" fill="currentColor"/>
+                            <circle cx="13.5" cy="1.5" r="1.5" fill="currentColor"/>
                             </g>
                         </svg>
                     </button>
@@ -200,9 +373,9 @@
                     <button class="notes__item-menu" aria-label="Меню заметки">
                         <svg width="15" height="3" viewBox="0 0 15 3" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g opacity="0.2">
-                            <circle cx="1.5" cy="1.5" r="1.5" fill="#141414"/>
-                            <circle cx="7.5" cy="1.5" r="1.5" fill="#141414"/>
-                            <circle cx="13.5" cy="1.5" r="1.5" fill="#141414"/>
+                            <circle cx="1.5" cy="1.5" r="1.5" fill="currentColor"/>
+                            <circle cx="7.5" cy="1.5" r="1.5" fill="currentColor"/>
+                            <circle cx="13.5" cy="1.5" r="1.5" fill="currentColor"/>
                             </g>
                         </svg>
                     </button>
@@ -219,31 +392,101 @@
                     <button class="notes__item-menu" aria-label="Меню заметки">
                         <svg width="15" height="3" viewBox="0 0 15 3" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g opacity="0.2">
-                            <circle cx="1.5" cy="1.5" r="1.5" fill="#141414"/>
-                            <circle cx="7.5" cy="1.5" r="1.5" fill="#141414"/>
-                            <circle cx="13.5" cy="1.5" r="1.5" fill="#141414"/>
+                            <circle cx="1.5" cy="1.5" r="1.5" fill="currentColor"/>
+                            <circle cx="7.5" cy="1.5" r="1.5" fill="currentColor"/>
+                            <circle cx="13.5" cy="1.5" r="1.5" fill="currentColor"/>
                             </g>
                         </svg>
                     </button>
                 </div>
               </article>
             </section>
-          </aside>
-          
+          </aside>  
         <section class="notes__content">
             <div class="notes__empty">
                 <span class="notes__empty-icon">
                     <svg width="63" height="76" viewBox="0 0 63 76" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M15 27H25" stroke="#141414" stroke-width="3"/>
-                        <path d="M15 42H47" stroke="#141414" stroke-width="3"/>
-                        <path d="M15 57H47" stroke="#141414" stroke-width="3"/>
-                        <path d="M61 22V67C61 70.866 57.866 74 54 74H9C5.13401 74 2 70.866 2 67V9C2 5.13401 5.13401 2 9 2H37.7608C37.7999 2 37.8377 2.01405 37.8673 2.03959V2.03959M61 22L37.8673 2.03959M61 22H38.8237C38.2705 22 37.8225 21.5509 37.8237 20.9977L37.8673 2.03959" stroke="#141414" stroke-width="3"/>
+                        <path d="M15 27H25" stroke="currentColor" stroke-width="3"/>
+                        <path d="M15 42H47" stroke="currentColor" stroke-width="3"/>
+                        <path d="M15 57H47" stroke="currentColor" stroke-width="3"/>
+                        <path d="M61 22V67C61 70.866 57.866 74 54 74H9C5.13401 74 2 70.866 2 67V9C2 5.13401 5.13401 2 9 2H37.7608C37.7999 2 37.8377 2.01405 37.8673 2.03959V2.03959M61 22L37.8673 2.03959M61 22H38.8237C38.2705 22 37.8225 21.5509 37.8237 20.9977L37.8673 2.03959" stroke="currentColor" stroke-width="3"/>
                     </svg>
                 </span>
                 <h2 class="notes__empty-title">Выберите для просмотра</h2>
                 <p class="notes__empty-text">
                     Выберите заметку из списка слева, чтобы просмотреть её содержимое, или создайте новую заметку.
                 </p>
+            </div>
+            <div class="notes__container">
+              <header class="notes__container-header">
+                <h2 class="notes__container-title">Планы на этот год</h2>
+                <span class="notes__container-date">07.05.24</span>
+              </header>
+              <div class="notes__container-body">
+                <ol class="notes__list-ol">
+                  <li class="notes__item">
+                    Стать крутым веб-дизайнером
+                  </li>
+                  <li class="notes__item">
+                    <h3 class="notes__item-title">Развитие канала на YouTube:</h3>
+                    <ul class="notes__sublist">
+                      <li class="notes__subitem">
+                        Выпускать 2–4 видео в месяц, делая акцент на образовательный контент в веб-дизайне и создании сайтов.
+                      </li>
+                      <li class="notes__subitem">
+                        Проводить анализ просмотров и комментариев, чтобы понимать, что нравится аудитории.
+                      </li>
+                      <li class="notes__subitem">
+                        Организовать прямые эфиры, где ты сможешь отвечать на вопросы и делиться опытом.
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="notes__item">
+                    <h3 class="notes__item-title">Расширение клиентской базы:</h3>
+                    <ul class="notes__sublist">
+                      <li class="notes__subitem">
+                        Запустить рекламную кампанию для продвижения услуг в соцсетях или через таргетированную рекламу.
+                      </li>
+                      <li class="notes__subitem">
+                        Создать портфолио с сильными кейсами, включая примеры логотипов, сайтов и иконок.
+                      </li>
+                      <li class="notes__subitem">
+                        Участвовать в профессиональных конкурсах и выставках, чтобы заявить о себе.
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="notes__item">
+                    <h3 class="notes__item-title">Освоение новых навыков:</h3>
+                    <ul class="notes__sublist">
+                      <li class="notes__subitem">
+                        Углубить знания в 3D-моделировании и попробовать интегрировать это в веб-дизайн.
+                      </li>
+                      <li class="notes__subitem">
+                        Изучить актуальные инструменты для дизайна, такие как Figma, Blender или более сложные CMS.
+                      </li>
+                      <li class="notes__subitem">
+                        Начать изучать UX-исследования для улучшения пользовательского опыта.
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="notes__item">
+                    <h3 class="notes__item-title">Запуск новых услуг:</h3>
+                    <ul class="notes__sublist">
+                      <li class="notes__subitem">
+                        Предлагать создание анимационных иконок или интерактивных элементов.
+                      </li>
+                      <li class="notes__subitem">
+                        Рассмотреть работу с AI-генерацией для упрощения и ускорения части процессов.
+                      </li>
+                    </ul>
+                  </li>
+                </ol>
+                <p class="notes__container-gpt">Сгенерировано ChatGPT</p>
+              </div>
+              <footer class="notes__container-footer">
+                <span class="notes__container-span">#планы</span>
+                <button class="notes__container-button">Добавить тег...</button>
+              </footer>
             </div>
         </section>
     </main>
@@ -252,10 +495,10 @@
           <header class="modal-settings__header">
             <h2 class="modal-settings__title">Настройки</h2>
             <button class="modal-settings__close" aria-label="Закрыть">
-                <svg width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M8 21.9998L22.1421 7.85762" stroke="#141414" stroke-width="2" stroke-linecap="round"/>
-                    <path d="M22 21.9998L7.85786 7.85762" stroke="#141414" stroke-width="2" stroke-linecap="round"/>
-                </svg>
+              <svg width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 21.9998L22.1421 7.85762" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M22 21.9998L7.85786 7.85762" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
             </button>
           </header>
           <main class="modal-settings__content">
@@ -269,12 +512,12 @@
               </div>
               <button class="modal-settings__user-menu" aria-label="Меню пользователя">
                 <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g opacity="0.2">
-                    <path d="M10 1V15" stroke="#141414" stroke-width="1.5" stroke-linecap="round"/>
-                    <circle cx="10" cy="11" r="1.5" fill="#EBEBEB" stroke="#141414"/>
-                    <path d="M2 1V15" stroke="#141414" stroke-width="1.5" stroke-linecap="round"/>
-                    <circle cx="2" cy="5" r="1.5" fill="#EBEBEB" stroke="#141414"/>
-                    </g>
+                  <g opacity="0.2">
+                  <path d="M10 1V15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  <circle cx="10" cy="11" r="1.5" fill="currentColor" stroke="currentColor"/>
+                  <path d="M2 1V15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  <circle cx="2" cy="5" r="1.5" fill="currentColor" stroke="currentColor"/>
+                  </g>
                 </svg>
               </button>
             </section>
@@ -285,7 +528,7 @@
                     <button class="modal-settings__dropdown-btn" type="button" aria-haspopup="listbox">
                       <span class="modal-settings__dropdown-icon">
                         <svg width="6" height="3" viewBox="0 0 6 3" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3 3L0.401924 0L5.59808 0L3 3Z" fill="#141414"/>
+                            <path d="M3 3L0.401924 0L5.59808 0L3 3Z" fill="currentColor"/>
                         </svg>
                       </span>
                     </button>
@@ -299,8 +542,8 @@
             <section class="modal-settings__actions">
               <button class="modal-settings__import-export">
                 <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 9V12C1 13.1046 1.89543 14 3 14H13C14.1046 14 15 13.1046 15 12V9" stroke="#141414" stroke-width="1.5" stroke-linecap="round"/>
-                    <path d="M8 1V10M8 10L5 7M8 10L11 7" stroke="#141414" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M1 9V12C1 13.1046 1.89543 14 3 14H13C14.1046 14 15 13.1046 15 12V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M8 1V10M8 10L5 7M8 10L11 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
                 Импорт/Экспорт заметок
               </button>
@@ -309,6 +552,16 @@
               </button>
             </section>
           </main>
+        </div>
+        <div class="modal-tag">
+          <div class="modal-tag__body">
+            <span class="modal-tag__gpt">#gpt</span>
+            <textarea name="area-gpt" id="area-gpt" class="area-gpt">Напиши сочинение на тему: “Трудно ли быть белой вороной”</textarea>
+          </div>
+          <footer class="modal-tag__footer">
+            <button class="modal-tag__cansel">Отмена</button>
+            <button class="modal-tag__send">Отправить</button>
+          </footer>
         </div>
       </div>
       
