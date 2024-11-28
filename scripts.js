@@ -57,7 +57,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function updateDropdownButton(theme) {
     const selectedText = theme === "dark" ? "Тёмная" : "Светлая";
-    dropdownBtn.innerHTML = `${selectedText}<span class="modal-settings__dropdown-icon">▼</span>`;
+    dropdownBtn.innerHTML = `${selectedText}<span class="modal-settings__dropdown-icon"><svg width="6" height="3" viewBox="0 0 6 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3 3L0.401924 0L5.59808 0L3 3Z" fill="currentColor"/>
+</svg>
+</span>`;
   }
 
   function applyTheme(theme) {
@@ -80,51 +83,66 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-  document.addEventListener("DOMContentLoaded", function() {
-    const settingsButton = document.querySelector('.notes__link.settings');
-    const addTagButton = document.querySelector('.notes__container-button');
-    const overlay = document.querySelector('.overlay');
-    const closeButtons = document.querySelectorAll('.modal-settings__close');
+document.addEventListener("DOMContentLoaded", function() {
+  const settingsButton = document.querySelector('.notes__link.settings');
+  const addTagButton = document.querySelector('.notes__container-button');
+  const deleteNoteButtons = document.querySelectorAll('.notes__box-button__delete');
+  const overlay = document.querySelector('.overlay');
+  const closeButtons = document.querySelectorAll('.modal-settings__close');
 
-    const modalSettings = document.querySelector('.modal-settings');
-    const modalTag = document.querySelector('.modal-tag');
-    const tagCloseButtons = document.querySelectorAll('.modal-tag__cansel, .modal-tag__send');
+  const modalSettings = document.querySelector('.modal-settings');
+  const modalTag = document.querySelector('.modal-tag');
+  const modalDelete = document.querySelector('.modal-delete');
+  const tagCloseButtons = document.querySelectorAll('.modal-tag__cansel, .modal-tag__send');
+  const deleteCloseButtons = document.querySelectorAll('.modal-delete__button');
 
-    function showModal(modal) {
-        hideModals();
-        overlay.style.display = 'flex';
-        modal.style.display = 'block';
-    }
+  function showModal(modal) {
+      hideModals();
+      overlay.style.display = 'flex';
+      modal.style.display = 'block';
+  }
 
-    function hideModals() {
-        overlay.style.display = 'none';
-        modalSettings.style.display = 'none';
-        modalTag.style.display = 'none';
-    }
+  function hideModals() {
+      overlay.style.display = 'none';
+      modalSettings.style.display = 'none';
+      modalTag.style.display = 'none';
+      modalDelete.style.display = 'none';
+  }
 
-    settingsButton.addEventListener('click', function(event) {
-        event.stopPropagation(); 
-        showModal(modalSettings);
-    });
+  settingsButton.addEventListener('click', function(event) {
+      event.stopPropagation();
+      showModal(modalSettings);
+  });
 
-    addTagButton.addEventListener('click', function(event) {
-        event.stopPropagation(); 
-        showModal(modalTag);
-    });
+  addTagButton.addEventListener('click', function(event) {
+      event.stopPropagation();
+      showModal(modalTag);
+  });
 
-    closeButtons.forEach(button => {
-        button.addEventListener('click', hideModals);
-    });
+  deleteNoteButtons.forEach(button => {
+      button.addEventListener('click', function(event) {
+          event.stopPropagation();
+          showModal(modalDelete);
+      });
+  });
 
-    tagCloseButtons.forEach(button => {
-        button.addEventListener('click', hideModals);
-    });
+  closeButtons.forEach(button => {
+      button.addEventListener('click', hideModals);
+  });
 
-    overlay.addEventListener('click', function(event) {
-        if (event.target === overlay) {
-            hideModals();
-        }
-    });
+  tagCloseButtons.forEach(button => {
+      button.addEventListener('click', hideModals);
+  });
+
+  deleteCloseButtons.forEach(button => {
+      button.addEventListener('click', hideModals);
+  });
+
+  overlay.addEventListener('click', function(event) {
+      if (event.target === overlay) {
+          hideModals();
+      }
+  });
 });
 
 
@@ -227,6 +245,45 @@ document.addEventListener('DOMContentLoaded', () => {
     if (activeBox) {
       activeBox.style.display = 'none';
       activeBox = null;
+    }
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const addButton = document.querySelector(".notes__top-button");
+  const foldersContainer = document.querySelector(".notes__folders");
+  const notesList = foldersContainer.querySelector(".notes__list");
+  const notesAdd = notesList.querySelector(".notes_add");
+  const addInput = notesAdd.querySelector("input");
+  const submitButton = notesAdd.querySelector(".notes_add-button");
+
+  notesAdd.style.display = "none";
+
+  addButton.addEventListener("click", () => {
+    notesAdd.style.display = "flex";
+    addInput.focus();
+  });
+
+  submitButton.addEventListener("click", () => {
+    const folderName = addInput.value.trim();
+
+    if (folderName) {
+      const newListItem = document.createElement("li");
+      newListItem.classList.add("notes__item");
+      newListItem.innerHTML = `
+        <button class="notes__link folder">
+          <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path opacity="0.6" d="M1 14V3C1 1.89543 1.89543 1 3 1H7.59375C8.3704 1 9 1.6296 9 2.40625C9 3.1829 9.6296 3.8125 10.4062 3.8125H17C18.1046 3.8125 19 4.70793 19 5.8125V14C19 15.1046 18.1046 16 17 16H3C1.89543 16 1 15.1046 1 14Z" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+          ${folderName}
+        </button>
+      `;
+      notesList.appendChild(newListItem);
+
+      addInput.value = "";
+      notesAdd.style.display = "none";
+    } else {
+      alert("Введите название папки!");
     }
   });
 });
