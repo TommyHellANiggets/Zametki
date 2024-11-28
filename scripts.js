@@ -173,30 +173,37 @@ document.querySelector('.confirm-button').addEventListener('click', () => {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-  const notesBar = document.querySelector('.notes__bar'); 
-  const notesItems = notesBar ? notesBar.querySelectorAll('.notes__list > .notes__item') : []; 
+  const notesBar = document.querySelector('.notes__bar');
+  const notesItems = notesBar ? notesBar.querySelectorAll('.notes__list > .notes__item') : [];
 
   const notesEmpty = document.querySelector('.notes__empty');
-  const notescontainer = document.querySelector('.notes__container');
+  const notesContainer = document.querySelector('.notes__container');
 
   notesItems.forEach(item => {
     const notesItemHeader = item.querySelector('.notes__item-header');
+    const notesItemToggle = item.classList.contains('notes__item-toggle') ? item : null;
+
+    const activateNote = () => {
+      if (notesEmpty) notesEmpty.style.display = 'none';
+      if (notesContainer) notesContainer.style.display = 'block';
+
+      notesItems.forEach(otherItem => {
+        if (otherItem === item) {
+          otherItem.classList.add('active');
+          otherItem.classList.remove('deactive');
+        } else {
+          otherItem.classList.add('deactive');
+          otherItem.classList.remove('active');
+        }
+      });
+    };
 
     if (notesItemHeader) {
-      notesItemHeader.addEventListener('click', function() {
-        if (notesEmpty) notesEmpty.style.display = 'none';
-        if (notescontainer) notescontainer.style.display = 'block';
+      notesItemHeader.addEventListener('click', activateNote);
+    }
 
-        notesItems.forEach(otherItem => {
-          if (otherItem === item) {
-            otherItem.classList.add('active'); 
-            otherItem.classList.remove('deactive'); 
-          } else {
-            otherItem.classList.add('deactive');
-            otherItem.classList.remove('active'); 
-          }
-        });
-      });
+    if (notesItemToggle) {
+      notesItemToggle.addEventListener('click', activateNote);
     }
   });
 });
